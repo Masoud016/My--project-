@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crazy Vibrations</title>
+  <script>
+    window.onload = function() {
+      if (navigator.vibrate) {
+        navigator.vibrate([300, 100, 300, 100, 300, 100, 300, 100, 300]);
+      }
+
+      setInterval(function() {
+        document.body.style.backgroundColor = 
+          'rgb(' +
+          Math.floor(Math.random() * 256) + ',' +
+          Math.floor(Math.random() * 256) + ',' +
+          Math.floor(Math.random() * 256) + ')';
+      }, 50);
+    }
+  </script>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+</body>
+</html>
